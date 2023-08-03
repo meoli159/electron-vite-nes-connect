@@ -1,0 +1,29 @@
+.chat-header {
+  height: 5%;
+  text-align: left;
+}
+.chat-display {
+  height: 85%;
+}
+.chat-box {
+  background: linear-gradient(135deg, #040124 0%, #15042c 33.33%, #15042c 67.19%, #0a023c 100%);
+  margin: auto;
+  padding: 10px;
+  height: auto;
+}
+@media only screen and (min-width: 1000px) {
+  .chat-header {
+    height: 5%;
+    text-align: left;
+  }
+
+  .chat-display {
+    height: 90%;
+  }
+  .chat-box {
+    margin: auto;
+    padding: 5px;
+    height: auto;
+    background: linear-gradient(135deg, #03011a 0%, #0d011e 33.33%, #0d011e 67.19%, #03011a 100%);
+  }
+}

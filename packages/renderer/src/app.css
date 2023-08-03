@@ -1,3 +1,50 @@
+* {
+  box-sizing: border-box;
+}
 .app {
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+}
+.column {
+  float: left;
+
   text-align: center;
+  height: 100vh;
+}
+
+.gr-chat-sidebar {
+  color: #ccc;
+  background: linear-gradient(135deg, #03011a 0%, #0d011e 33.33%, #0d011e 67.19%, #03011a 100%);
+  width: 20%;
+  border: 1px;
+}
+
+.main-chat-display {
+  width: 60%;
+  height: 100%;
+  color: #ccc;
+  background: linear-gradient(135deg, #03011a 0%, #0d011e 33.33%, #0d011e 67.19%, #03011a 100%);
+}
+
+.gr-user-sidebar {
+  color: #ccc;
+  background: linear-gradient(135deg, #03011a 0%, #0d011e 33.33%, #0d011e 67.19%, #03011a 100%);
+  width: 20%;
+}
+
+@media only screen and (min-width: 1000px) {
+  .gr-chat-sidebar {
+    width: 15%;
+  }
+
+  .main-chat-display {
+    width: 70%;
+  }
+
+  .gr-user-sidebar {
+    width: 15%;
+  }
 }
