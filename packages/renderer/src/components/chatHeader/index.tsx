@@ -1,9 +1,9 @@
 import React from 'react';
-
+import './style.css';
 export default function index() {
   return (
-    <div>
-      <li>Chat Name</li>
-    </div>
+    <>
+      <h3>Chat Name</h3>
+    </>
   );
 }

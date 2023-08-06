@@ -7,9 +7,9 @@ const App: React.FC = () => {
   return (
     <div className="app">
       <div className="container">
-        <GroupChatSideBar className="column gr-chat-sidebar" />
+        <GroupChatSideBar className="column left-sidebar" />
         <MainChatDisplay className="column main-chat-display" />
-        <GroupUserDisplay className="column gr-user-sidebar" />
+        <GroupUserDisplay className="column right-sidebar" />
       </div>
     </div>
   );

@@ -3,48 +3,34 @@
 }
 .app {
   margin: 0;
+  padding: 0;
 }
-
 .container {
-  height: 100vh;
+  display: flex;
 }
-.column {
-  float: left;
 
+.column {
   text-align: center;
   height: 100vh;
 }
 
-.gr-chat-sidebar {
-  color: #ccc;
-  background: linear-gradient(135deg, #03011a 0%, #0d011e 33.33%, #0d011e 67.19%, #03011a 100%);
-  width: 20%;
-  border: 1px;
+.left-sidebar {
+  color: #000;
+  /* background: linear-gradient(135deg, #03011a 0%, #0d011e 33.33%, #0d011e 67.19%, #03011adb 100%); */
+  background: whitesmoke;
+  width: 240px;
 }
 
 .main-chat-display {
-  width: 60%;
-  height: 100%;
-  color: #ccc;
-  background: linear-gradient(135deg, #03011a 0%, #0d011e 33.33%, #0d011e 67.19%, #03011a 100%);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  background-color: white;
 }
 
-.gr-user-sidebar {
-  color: #ccc;
-  background: linear-gradient(135deg, #03011a 0%, #0d011e 33.33%, #0d011e 67.19%, #03011a 100%);
-  width: 20%;
-}
-
-@media only screen and (min-width: 1000px) {
-  .gr-chat-sidebar {
-    width: 15%;
-  }
-
-  .main-chat-display {
-    width: 70%;
-  }
-
-  .gr-user-sidebar {
-    width: 15%;
-  }
+.right-sidebar {
+  color: #000;
+  background: whitesmoke;
+  width: 240px;
 }

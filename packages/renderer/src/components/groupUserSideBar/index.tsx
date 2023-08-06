@@ -4,5 +4,9 @@ type Props = {
   className: string;
 };
 export default function groupUserSideBar(props: Props) {
-  return <div className={props.className}>groupUserSideBar</div>;
+  return (
+    <div className={props.className}>
+      <h5>groupUserSideBar</h5>
+    </div>
+  );
 }

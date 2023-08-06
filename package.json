@@ -48,7 +48,8 @@
     "simple-git-hooks": "2.9.0",
     "typescript": "5.1.6",
     "unplugin-auto-expose": "0.0.5",
-    "vite": "4.4.7"
+    "vite": "4.4.7",
+    "vitest": "^0.34.1"
   },
   "dependencies": {
     "electron-updater": "6.1.1",

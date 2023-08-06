@@ -8,7 +8,7 @@ type Props = {
 export default function groupChatSideBar(prop: Props) {
   return (
     <div className={prop.className}>
-      <p> groupChatSideBar </p>
+      <h5> groupChatSideBar </h5>
       <div>
         <CommunityDisplay />
       </div>

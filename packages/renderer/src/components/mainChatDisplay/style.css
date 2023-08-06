@@ -1,29 +1,16 @@
 .chat-header {
   height: 5%;
-  text-align: left;
+  display: flex;
+  align-items: center;
 }
 .chat-display {
   height: 85%;
+  border: 0.5px solid;
+  flex: 1;
 }
 .chat-box {
-  background: linear-gradient(135deg, #040124 0%, #15042c 33.33%, #15042c 67.19%, #0a023c 100%);
+  background: white;
   margin: auto;
-  padding: 10px;
-  height: auto;
-}
-@media only screen and (min-width: 1000px) {
-  .chat-header {
-    height: 5%;
-    text-align: left;
-  }
-
-  .chat-display {
-    height: 90%;
-  }
-  .chat-box {
-    margin: auto;
-    padding: 5px;
-    height: auto;
-    background: linear-gradient(135deg, #03011a 0%, #0d011e 33.33%, #0d011e 67.19%, #03011a 100%);
-  }
+  padding: 0 15px 15px 15px;
+  width: 100%;
 }
