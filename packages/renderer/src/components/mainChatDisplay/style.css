@@ -1,8 +1,12 @@
-.chat-header {
+.chat-name {
   height: 5%;
   display: flex;
   align-items: center;
+  border: 0.5px solid;
+  color: black;
+  font-weight: bold;
 }
+
 .chat-display {
   height: 85%;
   border: 0.5px solid;
@@ -13,4 +17,14 @@
   margin: auto;
   padding: 0 15px 15px 15px;
   width: 100%;
+}
+
+.chat-form input {
+  display: inline-block;
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 0px solid gray;
+  background-color: whitesmoke;
 }

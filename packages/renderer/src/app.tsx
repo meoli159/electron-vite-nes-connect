@@ -1,16 +1,32 @@
 import React from 'react';
-import GroupChatSideBar from './components/groupChatSideBar';
-import GroupUserDisplay from './components/groupUserSideBar';
-import MainChatDisplay from './components/mainChatDisplay';
+import {Routes, Route} from 'react-router-dom';
+
 import './app.css';
+import MainPage from './pages/Main';
+import LoginPage from './pages/Login';
+import SettingPage from './pages/Setting';
 const App: React.FC = () => {
   return (
     <div className="app">
-      <div className="container">
-        <GroupChatSideBar className="column left-sidebar" />
-        <MainChatDisplay className="column main-chat-display" />
-        <GroupUserDisplay className="column right-sidebar" />
-      </div>
+      <Routes>
+        <Route
+          index
+          element={<MainPage />}
+        />
+
+        <Route
+          path="/login"
+          element={<LoginPage />}
+        />
+        <Route
+          path="/setting"
+          element={<SettingPage />}
+        />
+        <Route
+          path="*"
+          element={'Error 404, What r u doing here?'}
+        />
+      </Routes>
     </div>
   );
 };

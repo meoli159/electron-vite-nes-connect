@@ -8,7 +8,7 @@
     ":automergeBranch",
     ":disableDependencyDashboard",
     ":pinVersions",
-    ":onlyNpm",
+    ":onlyyarn",
     ":label(dependencies)"
   ],
   "packageRules": [

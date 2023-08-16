@@ -3,29 +3,25 @@
   "description": "Secure boilerplate for Electron app based on Vite",
   "version": "1.0.2",
   "private": true,
-  "author": {
-    "email": "kozackunisoft@gmail.com",
-    "name": "Alex Kozack",
-    "url": "https://kozack.me"
-  },
+  "author": "unknown",
   "main": "packages/main/dist/index.cjs",
   "scripts": {
-    "build": "npm run build:main && npm run build:preload && npm run build:renderer",
+    "build": "yarn run build:main && yarn run build:preload && yarn run build:renderer",
     "build:main": "cd ./packages/main && vite build",
     "build:preload": "cd ./packages/preload && vite build",
     "build:renderer": "cd ./packages/renderer && vite build",
-    "compile": "cross-env MODE=production npm run build && electron-builder build --config .electron-builder.config.js --dir --config.asar=false",
-    "test": "npm run test:main && npm run test:preload && npm run test:renderer && npm run test:e2e",
-    "test:e2e": "npm run build && vitest run",
+    "compile": "cross-env MODE=production yarn run build && electron-builder build --config .electron-builder.config.js --dir --config.asar=false",
+    "test": "yarn run test:main && yarn run test:preload && yarn run test:renderer && yarn run test:e2e",
+    "test:e2e": "yarn run build && vitest run",
     "test:main": "vitest run -r packages/main --passWithNoTests",
     "test:preload": "vitest run -r packages/preload --passWithNoTests",
     "test:renderer": "vitest run -r packages/renderer --passWithNoTests",
     "watch": "node scripts/watch.mjs",
-    "lint": "eslint . --ext js,mjs,cjs,ts,mts,cts,txs",
+    "lint": "eslint . --ext js,mjs,cjs,ts,mts,cts,tsx",
     "typecheck:main": "tsc --noEmit -p packages/main/tsconfig.json",
     "typecheck:preload": "tsc --noEmit -p packages/preload/tsconfig.json",
     "typecheck:renderer": "tsc --noEmit -p packages/renderer/tsconfig.json",
-    "typecheck": "npm run typecheck:main && npm run typecheck:preload && npm run typecheck:renderer",
+    "typecheck": "yarn run typecheck:main && yarn run typecheck:preload && yarn run typecheck:renderer",
     "postinstall": "cross-env ELECTRON_RUN_AS_NODE=1 electron scripts/update-electron-vendors.mjs",
     "format": "npx prettier --write \"**/*.{js,mjs,cjs,ts,mts,cts,tsx,json}\""
   },
@@ -52,8 +48,10 @@
     "vitest": "^0.34.1"
   },
   "dependencies": {
+    "electron-router-dom": "^1.0.5",
     "electron-updater": "6.1.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.2"
   }
 }

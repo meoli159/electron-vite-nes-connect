@@ -1,0 +1,24 @@
+.community-container {
+  margin: 1px;
+}
+.community-display a {
+  text-align: start;
+  display: block;
+  padding: 10px;
+  color: gray;
+}
+.community-display {
+  list-style-type: none;
+  /* border: 0.5px solid; */
+  border-radius: 5px;
+
+  margin: 0px;
+}
+.community-display:hover {
+  /* box-shadow: 0 0 11px rgba(210, 4, 4, 0.2); */
+  background-color: rgba(128, 128, 128, 0.2);
+}
+
+.community-display a:hover {
+  color: black;
+}

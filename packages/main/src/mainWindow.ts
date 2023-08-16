@@ -1,8 +1,10 @@
-import {app, BrowserWindow} from 'electron';
+import {app, BrowserWindow, ipcMain} from 'electron';
 import {join, resolve} from 'node:path';
 
 async function createWindow() {
   const browserWindow = new BrowserWindow({
+    width: 1200,
+    height: 700,
     minWidth: 900,
     minHeight: 600,
     show: false, // Use the 'ready-to-show' event to show the instantiated BrowserWindow.
@@ -15,6 +17,9 @@ async function createWindow() {
     },
   });
 
+  ipcMain.on('login', (event, data) => {
+    console.warn(data);
+  });
   /**
    * If the 'show' property of the BrowserWindow's constructor is omitted from the initialization options,
    * it then defaults to 'true'. This can cause flickering as the window loads the html content,
