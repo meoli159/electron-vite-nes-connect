@@ -21,17 +21,17 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: 'yarn'
-      - run: yarn ci
+      - run: yarn install --frozen-lockfile
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
-      - run: yarn run test:main --if-present
-      - run: yarn run test:preload --if-present
-      - run: yarn run test:renderer --if-present
+      - run: yarn run test:main #--if-present
+      - run: yarn run test:preload #--if-present
+      - run: yarn run test:renderer #--if-present
 
       # I ran into problems trying to run an electron window in ubuntu due to a missing graphics server.
       # That's why this special command for Ubuntu is here
       - run: xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- yarn run test:e2e --if-present
         if: matrix.os == 'ubuntu-latest'
 
-      - run: yarn run test:e2e --if-present
+      - run: yarn run test:e2e #--if-present
         if: matrix.os != 'ubuntu-latest'
