@@ -47,7 +47,7 @@ jobs:
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
 
-      - run: yarn run lint --if-present
+      - run: yarn run lint #--if-present
 
   # This job just check code style for in-template contributions.
   code-style:

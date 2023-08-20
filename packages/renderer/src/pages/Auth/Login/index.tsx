@@ -1,23 +1,19 @@
-import type {ChangeEvent} from 'react';
-import React, { useState} from 'react';
+import React, {useState, type ChangeEvent} from 'react';
 import './style.css';
+import {Link} from 'react-router-dom';
+import type {User} from 'types/User';
 
-type User = {
-  userName: string;
-  password: string;
-};
+function test(state: User) {
+  window.api.login(state);
+}
 
-// function test() {
-//   const electron = window.electron;
-//   electron.login('login', 'greeting from login page');
-// }
 export default function LoginPage() {
-  const [state, setState] = useState<User>({userName: '', password: ''});
+  const [state, setState] = useState<User>({email: '', password: ''});
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // test();
-    console.log(state?.userName, state?.password);
+    test(state);
+    console.log(state?.email, state?.password);
   };
 
   return (
@@ -29,13 +25,13 @@ export default function LoginPage() {
         <h1>Oh! Hi There Welcome Back Capt </h1>
         <div className="input-box">
           <input
-            name="userName"
-            type="text"
-            placeholder="User Name"
+            name="email"
+            type="email"
+            placeholder="email"
             onChange={(e: ChangeEvent<HTMLInputElement>) =>
-              setState({...state, userName: e.target.value})
+              setState({...state, email: e.target.value})
             }
-            value={state?.userName}
+            value={state?.email}
             required
           />
         </div>
@@ -69,12 +65,12 @@ export default function LoginPage() {
         <div className="register-link">
           <p>
             Don't have account?
-            <a
-              href="#"
+            <Link
+              to={'/register'}
               style={{margin: '5px', fontWeight: 'bold'}}
             >
               Register
-            </a>
+            </Link>
           </p>
         </div>
       </form>
